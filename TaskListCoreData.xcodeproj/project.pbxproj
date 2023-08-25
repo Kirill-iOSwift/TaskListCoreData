@@ -13,7 +13,7 @@
 		EDF973462A92020800EB5809 /* TaskListCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF973442A92020800EB5809 /* TaskListCoreData.xcdatamodeld */; };
 		EDF973482A92020900EB5809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF973472A92020900EB5809 /* Assets.xcassets */; };
 		EDF9734B2A92020900EB5809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF973492A92020900EB5809 /* LaunchScreen.storyboard */; };
-		EDF973532A920A7700EB5809 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF973522A920A7700EB5809 /* NewTaskViewController.swift */; };
+		EDF9735B2A92708300EB5809 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9735A2A92708300EB5809 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		EDF973472A92020900EB5809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDF9734A2A92020900EB5809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDF9734C2A92020900EB5809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDF973522A920A7700EB5809 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		EDF9735A2A92708300EB5809 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,64 @@
 		EDF9733A2A92020800EB5809 /* TaskListCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				EDF9733B2A92020800EB5809 /* AppDelegate.swift */,
-				EDF9733D2A92020800EB5809 /* SceneDelegate.swift */,
-				EDF9733F2A92020800EB5809 /* TaskListViewController.swift */,
-				EDF973522A920A7700EB5809 /* NewTaskViewController.swift */,
-				EDF973472A92020900EB5809 /* Assets.xcassets */,
-				EDF973492A92020900EB5809 /* LaunchScreen.storyboard */,
-				EDF9734C2A92020900EB5809 /* Info.plist */,
-				EDF973442A92020800EB5809 /* TaskListCoreData.xcdatamodeld */,
+				EDF973542A926FA900EB5809 /* App */,
+				EDF973552A926FB200EB5809 /* ViewControllers */,
+				EDF973592A92705900EB5809 /* Services */,
+				EDF973572A926FD600EB5809 /* Resources */,
+				EDF973562A926FC100EB5809 /* Storyboard */,
+				EDF973582A92701B00EB5809 /* CoreData */,
 			);
 			path = TaskListCoreData;
+			sourceTree = "<group>";
+		};
+		EDF973542A926FA900EB5809 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EDF9733B2A92020800EB5809 /* AppDelegate.swift */,
+				EDF9733D2A92020800EB5809 /* SceneDelegate.swift */,
+				EDF9734C2A92020900EB5809 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EDF973552A926FB200EB5809 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDF9733F2A92020800EB5809 /* TaskListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EDF973562A926FC100EB5809 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EDF973492A92020900EB5809 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EDF973572A926FD600EB5809 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDF973472A92020900EB5809 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDF973582A92701B00EB5809 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EDF973442A92020800EB5809 /* TaskListCoreData.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EDF973592A92705900EB5809 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EDF9735A2A92708300EB5809 /* StorageManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF973402A92020800EB5809 /* TaskListViewController.swift in Sources */,
-				EDF973532A920A7700EB5809 /* NewTaskViewController.swift in Sources */,
 				EDF9733C2A92020800EB5809 /* AppDelegate.swift in Sources */,
+				EDF9735B2A92708300EB5809 /* StorageManager.swift in Sources */,
 				EDF9733E2A92020800EB5809 /* SceneDelegate.swift in Sources */,
 				EDF973462A92020800EB5809 /* TaskListCoreData.xcdatamodeld in Sources */,
 			);
@@ -285,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B4D33S9Y62;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskListCoreData/Info.plist;
+				INFOPLIST_FILE = TaskListCoreData/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
@@ -316,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B4D33S9Y62;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskListCoreData/Info.plist;
+				INFOPLIST_FILE = TaskListCoreData/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
