@@ -48,7 +48,7 @@ final class TaskListViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = .white
     }
     
-   ///Метод добавления новой задачи
+    ///Метод добавления новой задачи
     @objc
     private func addNewTask() {
         showAlertNewTask(withTitle: "New Task", andMessage: "Whot do you want to do")
@@ -161,7 +161,7 @@ private extension TaskListViewController {
         let task = taskList[indexPath.row]
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { [unowned self] _ in
-            guard let task = alert.textFields?.first?.text else { return }
+            guard let task = alert.textFields?.first?.text, !task.isEmpty else { return }
             updateTask(in: indexPath, newTitle: task)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
