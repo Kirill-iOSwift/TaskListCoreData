@@ -11,33 +11,62 @@ final class StorageManager {
     
     static let shared = StorageManager()
     
-    // MARK: - Core Data stack
+    //MARK: - Core Data stack
     
-    let persistentContainer: NSPersistentContainer = {
+    private let persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "TaskListCoreData")
         
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores { _, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-        })
+        }
         return container
     }()
     
-    var viewContext: NSManagedObjectContext {
-        persistentContainer.viewContext
+    private let viweContext: NSManagedObjectContext
+    
+    private init() {
+        viweContext = persistentContainer.viewContext
     }
     
-    private init() {}
+    //MARK: - CRUD
     
-    // MARK: - Core Data Saving support
+    func create(_ taskName: String, completion: (Task) -> Void) {
+        let task = Task(context: viweContext)
+        task.title = taskName
+        completion(task)
+        saveContext()
+    }
+    
+    func fetchData(completion: (Result<[Task], Error>) -> Void) {
+        let fetchRequest = Task.fetchRequest()
+        
+        do {
+            let tasks = try viweContext.fetch(fetchRequest)
+            completion(.success(tasks))
+        } catch let error {
+            completion(.failure(error))
+        }
+    }
+    
+    func update(_ task: Task, newName: String) {
+        task.title = newName
+        saveContext()
+    }
+    
+    func delete(_ task: Task) {
+        viweContext.delete(task)
+        saveContext()
+    }
+    
+    //MARK: - Core Data Saving support
     
     func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
+        if viweContext.hasChanges {
             do {
-                try context.save()
+                try viweContext.save()
             } catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")

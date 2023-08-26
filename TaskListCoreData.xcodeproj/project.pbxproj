@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED8F7B9C2A99F286006B8B8A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F7B9B2A99F286006B8B8A /* AlertController.swift */; };
 		EDF9733C2A92020800EB5809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9733B2A92020800EB5809 /* AppDelegate.swift */; };
 		EDF9733E2A92020800EB5809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9733D2A92020800EB5809 /* SceneDelegate.swift */; };
 		EDF973402A92020800EB5809 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9733F2A92020800EB5809 /* TaskListViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED8F7B9B2A99F286006B8B8A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		EDF973382A92020800EB5809 /* TaskListCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskListCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF9733B2A92020800EB5809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDF9733D2A92020800EB5809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		EDF973552A926FB200EB5809 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED8F7B9B2A99F286006B8B8A /* AlertController.swift */,
 				EDF9733F2A92020800EB5809 /* TaskListViewController.swift */,
 			);
 			path = ViewControllers;
@@ -192,6 +195,7 @@
 				EDF9733C2A92020800EB5809 /* AppDelegate.swift in Sources */,
 				EDF9735B2A92708300EB5809 /* StorageManager.swift in Sources */,
 				EDF9733E2A92020800EB5809 /* SceneDelegate.swift in Sources */,
+				ED8F7B9C2A99F286006B8B8A /* AlertController.swift in Sources */,
 				EDF973462A92020800EB5809 /* TaskListCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
